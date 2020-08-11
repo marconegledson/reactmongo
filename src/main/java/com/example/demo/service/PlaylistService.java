@@ -45,9 +45,7 @@ public class PlaylistService {
 	}
 
 	public Flux<Playlist> findByName(String name) {
-		Playlist p = new Playlist();
-		p.setName(name);
-		return repository.findAll(Example.of(p));
+		return repository.findByName(name);
 	}
 
 }

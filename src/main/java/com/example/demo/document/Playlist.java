@@ -1,6 +1,7 @@
 package com.example.demo.document;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.Getter;
@@ -12,8 +13,10 @@ public class Playlist {
 	
 	@Id
 	private String id;
+	@Indexed
 	private String name;
-	
+	private String description;
+	private Double price;
 	
 	public Playlist(String id, String name) {
 		super();
